@@ -13,7 +13,7 @@ new Vue({
 });
 ```
 
-Ve výchozím stavu jsou všechny komponenty umístěny ve složce `www/client/components`. Samotné komponenty podporují **SASS** a rovněž i atribut **scoped**. 
+Ve výchozím stavu jsou všechny komponenty umístěny ve složce `www/client/components`. Samotné komponenty podporují **SASS** a rovněž i atribut **scoped**.
 
 ## Odkazy v komponentách
 
@@ -50,6 +50,18 @@ const Dog = window.model.dog;
 let dog = new Dog();
 ```
 
+Veškerá logika je umístěna v zaváděcím souboru `bootstrap.js` v kořeni složky `www`.
+
 ## API presenter
 
 Šablona obsahuje předpřipravený `ApiPresenter`, jež je zodpovědný za generování odkazů a hledání modelových tříd.
+
+## Závislosti šablony
+
+| Jméno         | Odkaz         |
+| ------------- |:-------------:|
+| Axios         | https://github.com/axios/axios |
+| Sass compiler | https://github.com/medialize/sass.js/ |
+| Vue       | https://github.com/vuejs/vue |
+| Http-vue-louder |https://github.com/FranckFreiburger/http-vue-loader |
+| Http-vue-louder |https://github.com/FranckFreiburger/http-vue-loader |
