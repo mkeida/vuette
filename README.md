@@ -59,7 +59,7 @@ Veškerá logika je umístěna v zaváděcím souboru `bootstrap.js` v kořeni s
 ## Závislosti šablony
 
 | Jméno         | Odkaz         |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | Axios         | https://github.com/axios/axios |
 | Sass compiler | https://github.com/medialize/sass.js/ |
 | Vue       | https://github.com/vuejs/vue |
