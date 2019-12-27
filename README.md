@@ -2,7 +2,7 @@
 Kombinace frameworků Nette a Vue.
 
 ## Jak to funguje?
-Vue komponenty jsou za pomocí knihovny **http-vue-loader** stahovány a poté načteny rovnou na klientské části aplikace bez pomoci Node.js nebo jakéhokoliv jiného builderu:
+Vue komponenty jsou za pomocí knihovny **http-vue-loader** stahovány a poté načteny rovnou na klientské části aplikace bez pomoci **Node.js** nebo jakéhokoliv jiného builderu:
 
 ```javascript
 new Vue({
