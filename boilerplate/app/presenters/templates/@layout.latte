@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	{* Hlavička *}
+	<head>
+		{* Meta tagy *}
+		<meta charset='utf-8'>
+		<meta name='viewport' content='width=device-width'>
+		{* Nadpis *}
+		<title>{ifset title}{include title|stripHtml} | {/ifset}Nette Web</title>
+	</head>
+	{* Tělo *}
+	<body>
+		{* Flash zprávy *}
+		<div n:foreach='$flashes as $flash' n:class='flash, $flash->type'>{$flash->message}</div>
+		{* Vue kontejner *}
+	    <div id='app'>
+			{include content}
+	    </div>
+		{* Skripty *}
+		{block scripts}
+			{* Hlavní závislosti *}
+			<script src='{$basePath}/client/lib/vue-dev.js'></script>
+			<script src='{$basePath}/client/lib/sass-compiler.js'></script>
+			<script src='{$basePath}/client/lib/vue-loader.js'></script>
+			<script src='{$basePath}/client/lib/axios.js'></script>
+			{* Entry point *}
+			<script src='{$basePath}/bootstrap.js'></script>
+		{/block}
+	</body>
+</html>
