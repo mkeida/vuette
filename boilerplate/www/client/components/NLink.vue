@@ -29,7 +29,7 @@
                 }
             }).then((res) => {
                 // Aktualizace URL proměnné
-                this.url = res;
+                this.url = res.data;
             });
         }
     }
