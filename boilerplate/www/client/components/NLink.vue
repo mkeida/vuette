@@ -24,7 +24,7 @@
                         // Cílová destinace
                         dest: this.to,
                         // Query parametry cílové URL
-                        params: JSON.stringify(_this.params)
+                        params: JSON.stringify(this.params)
                     }
                 }).then((res) => {
                     // Aktualizace URL proměnné
