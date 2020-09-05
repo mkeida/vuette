@@ -6,19 +6,14 @@ window.model = {};
 axios.get('/api/get-model').then((res) => {
     // Projdeme všechny .js soubory modelu
     for (file of res.data) {
-        // Vyžádáme si soubor a provedeme inject
-        // modelových tříd
-        axios.get(file.path).then((script) => {
-            // Spustíme zdrojový kód souboru. Provede se inject
-            // modelové třídy do window.model objektu
-            try {
-                // Zavoláme obsah souboru
-                eval(script.data);
-            } catch (e) {
-                // Ohlásí chybu do konzole
-                throw e.constructor(`Error in evaled script: ${e.message} in ${file}`);
-            }
-        });
+        // Vytvoří script tag
+        let element = document.createElement('script');
+
+        // Přiřadí src atribut
+        element.setAttribute('src', file.path);
+
+        // Vloží script do DOMu
+        document.head.appendChild(element);
     }
 }).then(() => {
     // Po načtení modelových tříd načteme komponenty
