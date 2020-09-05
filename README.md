@@ -1,7 +1,7 @@
 ![vuette](https://user-images.githubusercontent.com/34581569/92305628-5000a900-ef89-11ea-96af-1a17db4eecf5.png)
 
 # Vuette
-Kombinace frameworků Nette a Vue bez nutnosti buildu. Určeno pro malé projekty a testovací účely.
+Kombinace frameworků Nette a Vue bez nutnosti buildu (node.js). Určeno pro malé projekty a testovací účely.
 
 ## Jak to funguje?
 Vue komponenty jsou za pomocí knihovny **http-vue-loader** stahovány a poté načteny rovnou na klientské části aplikace bez pomoci **Node.js** nebo jakéhokoliv jiného builderu:
