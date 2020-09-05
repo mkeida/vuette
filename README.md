@@ -20,7 +20,7 @@ Ve výchozím stavu jsou všechny komponenty umístěny ve složce `www/client/c
 Komponenty pochopitelně neumožňují použití šablonovacího systému **latte** . Vue má své vlastní funkcionality pro psaní šablon (jako např. filtry a direktivy) a není to tedy problém do doby, než potřebujeme vytvořit odkaz na presenter. Pro tyto účely obsahuje šablona komponentu `NLink`:
 
 ```html
-<n-link to="Homepage:default" :params="{ id: 1, chapter: 7 }" anchror="heading">Odkaz</n-link>
+<n-link to="Homepage:default" :params="{ id: 1, chapter: 7 }" anchor="heading">Odkaz</n-link>
 ```
 
 Komponenta je poté přeložena na:
