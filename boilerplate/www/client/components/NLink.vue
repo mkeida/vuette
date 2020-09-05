@@ -1,5 +1,5 @@
 <template>
-    <a :href='url'>
+    <a v-if='url' :href='url'>
         <slot />
     </a>
 </template>
@@ -13,7 +13,7 @@
             }
         },
         // Atributy komponenty
-        props: ['to', 'params'],
+        props: ['to', 'params', 'anchor'],
         // Když je componenta vytvořena
         created() {
             // Když je DOM načten, požádáme o link
@@ -28,7 +28,7 @@
                     }
                 }).then((res) => {
                     // Aktualizace URL proměnné
-                    this.url = res.data;
+                    this.url = this.anchor ? `${res}#${this.anchor}` : res;
                 });
             });
         }
