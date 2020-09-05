@@ -1,5 +1,3 @@
-![vuette](https://user-images.githubusercontent.com/34581569/92305588-f8623d80-ef88-11ea-8a70-723c678166f0.png)
-
 # Vuette
 Kombinace frameworků Nette a Vue bez nutnosti buildu. Určeno pro malé projekty a testovací účely.
 
