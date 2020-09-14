@@ -19,7 +19,7 @@
             // Když je DOM načten, požádáme o link
             Vue.nextTick(() => {
                 // Zažádá server o adresu
-                axios.get('/api/get-link', {
+                axios.get('./api/get-link', {
                     params: {
                         // Cílová destinace
                         dest: this.to,
