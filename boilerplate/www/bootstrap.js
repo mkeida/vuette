@@ -3,7 +3,7 @@
 window.model = {};
 
 // Získá modelové třídy od serveru
-axios.get('/api/get-model').then((res) => {
+axios.get('./api/get-model').then((res) => {
     // Projdeme všechny .js soubory modelu
     for (file of res.data) {
         // Vytvoří script tag
@@ -17,8 +17,8 @@ axios.get('/api/get-model').then((res) => {
     }
 }).then(() => {
     // Po načtení modelových tříd načteme komponenty
-    const nLink = httpVueLoader('/client/components/NLink.vue');
-    const myComponent = httpVueLoader('/client/components/MyComponent.vue');
+    const nLink = httpVueLoader('./client/components/NLink.vue');
+    const myComponent = httpVueLoader('./client/components/MyComponent.vue');
 
     // Globálně zaregistruje NLink komponentu pro
     // generování Nette odkazů uvnitř Vue komponent
